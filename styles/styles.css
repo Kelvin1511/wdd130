@@ -1,4 +1,4 @@
-/* --- Navigation Styles --- */
+/* Navigation */
 nav {
     background-color: #333;
     padding: 1rem;
@@ -11,7 +11,7 @@ nav a {
     text-decoration: none;
 }
 
-/* --- Main Layout --- */
+/* Main */
 main {
     max-width: 840px;
     margin: 0 auto;
@@ -29,7 +29,7 @@ main img {
     box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
-/* --- Aside Section --- */
+/* Aside */
 aside {
     width: 20rem;
     margin: 1rem auto;
@@ -45,12 +45,12 @@ aside img {
     height: auto;
 }
 
-/* --- Paragraphs --- */
+/* Paragraphs */
 p {
     padding: 0;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
