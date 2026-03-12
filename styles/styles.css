@@ -1,39 +1,58 @@
-/* --- General Layout --- */
-main {
-  max-width: 840px;
-  margin: 0 auto;
+/* --- Navigation Styles --- */
+nav {
+    background-color: #333;
+    padding: 1rem;
 }
 
-/* Estilos para el elemento Aside (Cochabamba) */
+nav a {
+    color: white;
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+/* --- Main Layout --- */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border: 5px solid #ccc;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+/* --- Aside Section --- */
 aside {
-  width: 20rem;
-  margin: 1rem auto;
-  border: 1px solid rgb(0 0 0 / 0.2);
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
-  text-align: center;
+    width: 20rem;
+    margin: 1rem auto;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
 }
 
 aside img {
-  width: 200px;
-  height: auto;
+    width: 200px;
+    height: auto;
 }
 
-/* Imagen de perfil en el Main */
-main img {
-  width: 150px;
-  height: auto;
-}
-
-/* Párrafos */
+/* --- Paragraphs --- */
 p {
-  padding: 0;
+    padding: 0;
 }
 
-/* Pie de página */
+/* --- Footer --- */
 footer {
-  margin-top: 15px;
-  border-top: 1px solid #000;
-  text-align: center;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
 }
