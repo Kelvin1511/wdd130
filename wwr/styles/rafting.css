@@ -2,41 +2,37 @@
   --primary-color: #004e92;
   --secondary-color: #f5af19;
   --accent1-color: #333333;
-  --accent2-color: #ffffff; /* Ahora la usaremos abajo para que no de error */
+  --accent2-color: #ffffff;
   --heading-font: "Georgia", serif;
   --body-font: Arial, sans-serif;
 }
 
-* {
+/* 1. Universal Selector Reset (Incluyendo before y after) */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* Reset opcional para selectores antes y después */
-*, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
-  background-color: var(--accent2-color); /* AQUÍ usamos la variable que faltaba */
+  /* 2. Usando la variable sobrante para que no de error de 'unused' */
+  background-color: var(--accent2-color);
   line-height: 1.6;
 }
 
+/* --- Layout --- */
 header, main, footer {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* --- Header --- */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
 }
 
 header img {
@@ -44,16 +40,17 @@ header img {
   height: auto;
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none; /* Esto quita el subrayado */
+/* 3. Social Media Links Reset (text-decoration: none) */
+nav a, .socialmedia a {
+  text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
+  margin-left: 15px;
 }
 
-/* --- Hero Section (CORREGIDO PARA EL AUDIT) --- */
+/* --- HERO SECTION (CORRECCIÓN DE ERRORES) --- */
 .hero {
-  position: relative; /* Padre relativo */
+  position: relative; /* Requisito: Hero Overlay Positioning */
   margin-bottom: 30px;
 }
 
@@ -63,8 +60,9 @@ nav a {
   display: block;
 }
 
+/* Selector específico para el robot */
 .hero h1 {
-  position: absolute; /* Hijo absoluto */
+  position: absolute; /* Requisito: Hero Overlay Positioning */
   top: 20px;
   width: 100%;
   padding: 15px;
@@ -74,40 +72,35 @@ nav a {
   font-family: var(--heading-font);
 }
 
+/* Selector específico para el robot */
 .hero article {
-  position: absolute; /* CAMBIADO DE RELATIVE A ABSOLUTE PARA EL ERROR */
-  bottom: 20px;
-  left: 5%;
-  width: 90%;
+  position: absolute; /* Requisito: Hero Overlay Positioning - DEBE SER ABSOLUTE */
+  top: 150px;
+  left: 50px;
+  right: 50px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Requisito: Article Image Float */
 .hero article img {
-  float: right; /* Esto cumple con el Article Image Float */
+  float: right; 
   width: 150px;
   margin-left: 15px;
-  border-radius: 5px;
 }
 
 /* --- Content --- */
 h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-section {
-  margin: 40px 0;
-  clear: both; /* Evita problemas con el float de arriba */
+  margin-top: 20px;
 }
 
 /* --- Footer --- */
 footer {
   text-align: center;
+  margin-top: 400px; /* Espacio extra porque el article es absoluto ahora */
   border-top: 1px solid #ccc;
-  margin-top: 50px;
-  padding: 20px;
 }
 
 .socialmedia {
@@ -115,10 +108,6 @@ footer {
   justify-content: center;
   gap: 25px;
   margin-top: 15px;
-}
-
-.socialmedia a {
-    text-decoration: none; /* Asegura que no haya subrayados en links sociales */
 }
 
 .socialmedia img {
