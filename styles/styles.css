@@ -1,58 +1,82 @@
-/* Navigation */
+/* Universal Selector - Resets margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 nav {
-    background-color: #333;
-    padding: 1rem;
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
 }
 
 nav a {
-    color: white;
-    padding: 1rem;
-    display: block;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
 }
 
-/* Main */
-main {
-    max-width: 840px;
-    margin: 0 auto;
-}
-
-h1 {
-    color: #2c3e50;
-}
-
+/* Floating profile image to the right */
 main img {
-    width: 150px;
-    height: auto;
-    border: 5px solid #ccc;
-    padding: 10px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  float: right;
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 0 20px 20px;
 }
 
-/* Aside */
+/* Positioning for the Aside element */
 aside {
-    width: 20rem;
-    margin: 1rem auto;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
+  position: relative; /* Container for absolute positioning */
+  width: 300px;
+  clear: both; /* Ensures it doesn't overlap the floating image weirdly */
+}
+
+aside h2 {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 aside img {
-    width: 200px;
-    height: auto;
+    width: 100%;
+    float: none; /* Resets float specifically for the aside image */
+    margin: 0;
 }
 
-/* Paragraphs */
-p {
-    padding: 0;
+/* Class Selectors Section */
+/* Class Selectors */
+.box {
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 10%);
+  padding: 1rem;
+  background-color: #eeeeee;
+  color: #000;
+  list-style: none; /* Removes bullets from the temple list */
 }
 
-/* Footer */
+.box li {
+    margin-bottom: 10px;
+}
+
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #666;
 }
