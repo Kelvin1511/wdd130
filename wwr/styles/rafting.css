@@ -1,11 +1,10 @@
-/* 1. UNIVERSAL SELECTOR RESET - Requerido por el Audit */
+/* UNIVERSAL SELECTOR RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. CSS VARIABLES - Se deben usar todas */
 :root {
     --primary-color: #003366;
     --secondary-color: #ffffff;
@@ -19,7 +18,6 @@ body {
     line-height: 1.6;
 }
 
-/* 3. HEADER & NAV */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -30,6 +28,7 @@ header {
 
 header img {
     width: 100px;
+    height: auto;
 }
 
 nav {
@@ -37,7 +36,6 @@ nav {
     justify-content: space-around;
 }
 
-/* Color blanco para pasar el check de contraste */
 nav a, .socialmedia a {
     text-decoration: none;
     color: var(--secondary-color);
@@ -45,14 +43,13 @@ nav a, .socialmedia a {
     padding: 10px;
 }
 
-/* Uso de variable de acento para evitar error de 'Unused variable' */
 nav a:hover {
     color: var(--accent-color);
 }
 
-/* 4. HERO OVERLAY POSITIONING - Requerido */
+/* HERO SECTION */
 .hero {
-    position: relative; /* Contenedor relativo */
+    position: relative;
     display: block;
 }
 
@@ -62,7 +59,7 @@ nav a:hover {
 }
 
 .hero article {
-    position: absolute; /* Texto sobre la imagen */
+    position: absolute;
     top: 50px;
     left: 50px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -70,14 +67,14 @@ nav a:hover {
     width: 50%;
 }
 
-/* Requerido: La imagen dentro del article debe tener float: right */
 .hero article img {
     float: right;
     width: 150px;
+    height: auto;
     margin-left: 15px;
 }
 
-/* 5. ADVENTURE GRID */
+/* SECTIONS */
 section {
     padding: 20px;
 }
@@ -100,7 +97,7 @@ section {
     object-fit: cover;
 }
 
-/* 6. FOOTER */
+/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
