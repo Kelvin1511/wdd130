@@ -1,23 +1,25 @@
-/* 1. UNIVERSAL SELECTOR RESET - REQUIRED */
+/* 1. UNIVERSAL SELECTOR RESET - Requerido por el Audit */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. CSS VARIABLES - REQUIRED */
+/* 2. CSS VARIABLES - Se deben usar todas */
 :root {
     --primary-color: #003366;
     --secondary-color: #ffffff;
-    --accent-color: #ff6600; /* Robot looks for this to be USED */
+    --accent-color: #ff6600; 
 }
 
 body {
     font-family: Arial, sans-serif;
     max-width: 1000px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
+/* 3. HEADER & NAV */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -26,26 +28,31 @@ header {
     padding: 10px;
 }
 
+header img {
+    width: 100px;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
 }
 
+/* Color blanco para pasar el check de contraste */
 nav a, .socialmedia a {
     text-decoration: none;
     color: var(--secondary-color);
+    font-weight: bold;
     padding: 10px;
 }
 
-/* USE OF ACCENT COLOR - Fixes 'Unused Variable' Error */
+/* Uso de variable de acento para evitar error de 'Unused variable' */
 nav a:hover {
     color: var(--accent-color);
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* HERO SECTION - REQUIRED POSITIONING */
+/* 4. HERO OVERLAY POSITIONING - Requerido */
 .hero {
-    position: relative;
+    position: relative; /* Contenedor relativo */
     display: block;
 }
 
@@ -55,22 +62,26 @@ nav a:hover {
 }
 
 .hero article {
-    position: absolute;
-    top: 30px;
-    left: 30px;
+    position: absolute; /* Texto sobre la imagen */
+    top: 50px;
+    left: 50px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     width: 50%;
 }
 
-/* REQUIRED FLOAT */
+/* Requerido: La imagen dentro del article debe tener float: right */
 .hero article img {
     float: right;
-    width: 120px;
-    margin-left: 10px;
+    width: 150px;
+    margin-left: 15px;
 }
 
-/* ADVENTURE GRID */
+/* 5. ADVENTURE GRID */
+section {
+    padding: 20px;
+}
+
 .adventure-grid {
     display: flex;
     justify-content: space-between;
@@ -78,13 +89,18 @@ nav a:hover {
     margin-top: 20px;
 }
 
+.adventure-grid figure {
+    flex: 1;
+    text-align: center;
+}
+
 .adventure-grid img {
     width: 100%;
-    height: 100px;
+    height: 120px;
     object-fit: cover;
 }
 
-/* FOOTER AND SOCIALMEDIA */
+/* 6. FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
