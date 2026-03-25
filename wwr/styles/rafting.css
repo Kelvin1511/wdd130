@@ -1,5 +1,4 @@
-/* 1. UNIVERSAL SELECTOR RESET */
-/* This ensures no default browser margins interfere with the layout */
+/* 1. UNIVERSAL SELECTOR RESET - Required for Audit */
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +6,12 @@
 }
 
 /* 2. CSS VARIABLES IN :ROOT */
-/* Required by the audit tool to demonstrate professional styling practices */
 :root {
     --primary-color: #003366;
     --secondary-color: #ffffff;
     --accent-color: #ff6600;
-    --text-background: rgba(255, 255, 255, 0.8);
 }
 
-/* 3. BODY STYLING */
 body {
     font-family: Arial, sans-serif;
     max-width: 1000px;
@@ -23,8 +19,6 @@ body {
     color: #333;
 }
 
-/* 4. HEADER & NAV (GRID AND FLEX) */
-/* Requirement: Header must use CSS Grid */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -37,21 +31,23 @@ header img {
     width: 100px;
 }
 
-/* Requirement: Nav must use CSS Flex */
 nav {
     display: flex;
     justify-content: space-around;
 }
 
 nav a, .socialmedia a {
-    text-decoration: none; /* Required: No underlines on links */
+    text-decoration: none;
     color: var(--secondary-color);
-    font-weight: bold;
     padding: 10px;
 }
 
-/* 5. HERO SECTION POSITIONING */
-/* Requirement: .hero must be relative, children must be absolute */
+/* Using accent color to avoid 'unused variable' error */
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* HERO POSITIONING - Required Overlay */
 .hero {
     position: relative;
     display: block;
@@ -63,27 +59,24 @@ nav a, .socialmedia a {
 }
 
 .hero article {
-    position: absolute; /* Required for the overlay effect */
+    position: absolute;
     top: 50px;
     left: 50px;
-    background-color: var(--text-background);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    width: 50%;
-    border: 1px solid #ccc;
+    width: 60%;
 }
 
-/* Requirement: Article image must float right */
+/* ARTICLE IMAGE FLOAT - Required by Audit */
 .hero article img {
-    float: right; 
+    float: right;
     width: 150px;
-    height: auto;
     margin-left: 15px;
 }
 
-/* 6. SECTIONS (HISTORY & ADVENTURES) */
+/* SECTIONS */
 section {
     padding: 20px;
-    margin: 20px 0;
 }
 
 .adventure-grid {
@@ -92,18 +85,13 @@ section {
     gap: 10px;
 }
 
-.adventure-grid figure {
-    margin: 0;
-    text-align: center;
-}
-
 .adventure-grid img {
     width: 100%;
     height: 120px;
     object-fit: cover;
 }
 
-/* 7. FOOTER & SOCIAL MEDIA */
+/* FOOTER & SOCIAL MEDIA */
 footer {
     display: flex;
     justify-content: space-between;
@@ -113,13 +101,12 @@ footer {
     padding: 20px;
 }
 
-/* Requirement: Must use the class .socialmedia in the nav */
 .socialmedia {
     display: flex;
-    gap: 15px;
 }
 
 .socialmedia img {
     width: 30px;
     height: 30px;
+    margin: 0 5px;
 }
