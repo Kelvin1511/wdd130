@@ -1,97 +1,85 @@
-/* General Styles */
+/* VARIABLES :root (Requisito Audit) */
 :root {
     --primary-color: #003366;
-    --secondary-color: #f4f4f4;
+    --secondary-color: #ffffff;
     --accent-color: #ff6600;
 }
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-/* Header with CSS GRID (Requirement 2) */
 header {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 150px 1fr;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 10px 20px;
 }
 
-header img {
-    width: 100px;
-}
-
-/* Nav with CSS FLEX (Requirement 3) */
 nav {
     display: flex;
     justify-content: space-around;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+nav a, .socialmedia a {
+    text-decoration: none; /* Requisito Audit */
+    color: var(--secondary-color);
     padding: 10px;
 }
 
-/* History Section */
-.history {
+/* POSICIONAMIENTO HERO (Soluciona errores de Hero Overlay) */
+.hero {
+    position: relative; /* Requisito Audit */
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero article {
+    position: absolute; /* Requisito Audit */
+    top: 50px;
+    left: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    text-align: center;
 }
 
-.history-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    align-items: center;
+.hero article img {
+    float: right; /* Requisito Audit: Article Image Float */
+    width: 100px;
+    margin-left: 10px;
 }
 
-/* Adventures Section (Requirement 4 & 6) */
-.adventures {
-    padding: 20px;
-}
-
+/* ADVENTURE GRID */
 .adventure-grid {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    overflow-x: auto;
-}
-
-.adventure-grid figure {
-    margin: 0;
-    flex: 1;
-    text-align: center;
+    justify-content: space-around;
 }
 
 .adventure-grid img {
-    width: 100%;
-    height: 150px;
+    width: 150px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 5px;
 }
 
-/* Footer with Social Links to the RIGHT (Requirement 5) */
+/* FOOTER Y SOCIAL MEDIA */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     background-color: var(--primary-color);
     color: white;
+    padding: 20px;
 }
 
-.social-links {
+.socialmedia {
     display: flex;
-    gap: 15px;
 }
 
-.social-links img {
+.socialmedia img {
     width: 30px;
+    margin: 5px;
 }
