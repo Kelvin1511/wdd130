@@ -1,50 +1,48 @@
-/* Color Palette */
+/* Color Palette*/
 :root {
-    --primary: #004e92;
-    --secondary: #ff6a00;
-    --text: #333;
-    --bg-light: #f9f9f9;
+    --primary-color: #004e92;
+    --secondary-color: #ff6a00;
+    --accent-color: #ffffff;
+    --text-color: #333333;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica', Arial, sans-serif;
     margin: 0;
-    color: var(--text);
-    background-color: var(--bg-light);
+    color: var(--text-color);
 }
 
-/* Header & Nav */
+/* Header Organizado con Flexbox */
 header {
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
-    border-bottom: 2px solid var(--primary);
+    padding: 20px 5%;
+    background-color: var(--accent-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 header img {
-    height: 70px;
-    width: auto;
+    width: 120px; /* Tamaño del logo controlado */
 }
 
 nav a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--primary-color);
     font-weight: bold;
     margin-left: 20px;
 }
 
-/* Hero Section */
+/* Sección Hero con texto encima de la imagen */
 .hero {
     position: relative;
-    width: 100%;
+    text-align: center;
 }
 
 .hero-img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 500px;
+    object-fit: cover; /* Evita que la imagen se estire */
 }
 
 .hero-msg {
@@ -52,103 +50,71 @@ nav a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    width: 60%;
-}
-
-.cta-button, .cta-contact {
-    display: inline-block;
-    background-color: var(--secondary);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Newsletter */
-.newsletter {
-    background: #eee;
     padding: 30px;
-    text-align: center;
+    border-radius: 10px;
 }
 
-.form-inputs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
-/* CSS GRID */
-.home-grid, .trips-grid {
+/* Uso de GRID para las tarjetas de viajes (TRIPS) */
+.trips-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 40px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px;
 }
 
-.grid-item, .trip-card {
-    background: white;
-    border-radius: 8px;
+.trip-card {
+    background: #f9f9f9;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
 }
 
-.grid-item img, .trip-card img {
+.trip-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
-/* Table Style */
-.table-container {
-    padding: 40px 5%;
-    overflow-x: auto;
+.trip-card figcaption {
+    padding: 20px;
+    text-align: center;
 }
 
+/* Tabla Estilizada */
 table {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 90%;
+    margin: 40px auto;
     border-collapse: collapse;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
 th {
-    background-color: var(--primary);
+    background-color: var(--primary-color);
     color: white;
+    padding: 15px;
 }
 
-/* Footer & Social Icons Fix */
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Footer con iconos pequeños */
 footer {
-    background: #333;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-}
-
-.socialmedia {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    padding: 40px;
+    margin-top: 50px;
 }
 
 .socialmedia img {
-    width: 30px;
-    height: 30px;
+    width: 35px; /* Arregla los iconos gigantes de FB/IG */
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.2);
 }
