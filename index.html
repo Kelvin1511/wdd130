@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Whitewater Rafting | Rich Kevin Panozo</title>
-    <meta name="description" content="The best whitewater rafting adventures in Bolivia and the world. Join us today!">
+    <title>Home | Whitewater Rafting Adventures</title>
+    <meta name="description" content="Experience the best whitewater rafting adventures. We offer trips for families and adrenaline seekers alike.">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Rafting Logo">
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Rafting Logo">
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -17,41 +19,47 @@
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
+
     <main>
         <div class="hero">
-            <img src="images/hero.jpg" alt="Main Hero Image" class="hero-img">
-            <article class="hero-msg">
-                <h1>Experience the Wild</h1>
-                <a href="trips.html" class="cta-btn">View Our Trips</a>
-            </article>
+            <img src="images/hero.jpg" alt="Rafting Adventure" class="hero-img">
+            <div class="hero-msg">
+                <h1>Adventure is Waiting</h1>
+                <p>Find your next great river experience with our expert guides.</p>
+                <a href="trips.html" class="cta-button">See Our Trips</a>
+            </div>
         </div>
 
         <section class="newsletter">
-            <h2>Join Our Adventure</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Sign Up</button>
+            <h2>Join the Adventure</h2>
+            <p>Subscribe to our newsletter for trip updates and special offers.</p>
+            <form action="#" method="post">
+                <div class="form-inputs">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <button type="submit">Subscribe Now</button>
+                </div>
             </form>
         </section>
 
         <section class="home-grid">
-            <div class="grid-box">
-                <img src="images/client.jpg" alt="Happy customers">
-                <h3>Our Mission</h3>
-                <p>Bringing nature closer to you through safe and exciting river runs.</p>
+            <div class="grid-item">
+                <img src="images/client.jpg" alt="Our Happy Clients">
+                <h3>Our Purpose</h3>
+                <p>We aim to bring the thrill of nature to everyone, ensuring safety and fun in every rapid.</p>
             </div>
-            <div class="grid-box">
-                <img src="images/hero.jpg" alt="Rafting action">
-                <h3>Our Equipment</h3>
-                <p>We use the highest safety standards and top-tier gear in every trip.</p>
+            <div class="grid-item">
+                <img src="images/hero.jpg" alt="Rafting Gear">
+                <h3>Our Offerings</h3>
+                <p>From one-day splashes to week-long expeditions, we have the perfect trip for you.</p>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>© 2026 Rafting Project | Rich Kevin Panozo Vargas | Bolivia</p>
+        <p>&copy; 2026 Rafting Project | Rich Kevin Panozo Vargas | Bolivia</p>
         <nav class="socialmedia">
             <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
             <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
