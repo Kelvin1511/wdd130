@@ -1,8 +1,8 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
 }
 
 header {
@@ -10,7 +10,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background-color: #fff;
+    background-color: #ffffff;
     border-bottom: 2px solid #004e92;
 }
 
@@ -25,9 +25,10 @@ nav a {
     margin-left: 20px;
 }
 
-/* Hero Section */
+/* Home Layout */
 .hero {
     position: relative;
+    text-align: center;
 }
 
 .hero-img {
@@ -41,104 +42,94 @@ nav a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
+    padding: 25px;
+    border-radius: 10px;
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: #004e92;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 15px;
-}
-
-/* Home Grid & Trips Grid (Controlled width and layout) */
-.home-grid, .trips-grid {
+.home-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.grid-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Contact Us Layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
     padding: 50px 5%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.grid-box, .trip-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-.grid-box img, .trip-card img {
-    width: 100%;
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-/* Contact Page Layout */
-.contact-details {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 5%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
 .contact-info, .contact-form {
     flex: 1;
-    margin: 0 20px;
+    min-width: 300px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .map-container img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.contact-form label {
+/* Form Styling */
+form label {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: bold;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+form input[type="text"], 
+form input[type="email"], 
+form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    margin-top: 5px;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.submit-button {
+form button {
     background-color: #004e92;
     color: white;
+    padding: 12px 25px;
     border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
     border-radius: 4px;
+    margin-top: 20px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
     padding: 30px;
-    margin-top: 50px;
-}
-
-.socialmedia img {
-    width: 30px;
-    margin: 0 10px;
+    margin-top: 40px;
 }
