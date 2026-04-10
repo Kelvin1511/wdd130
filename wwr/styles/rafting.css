@@ -1,19 +1,22 @@
 :root {
-    --primary-blue: #004e92;
-    --dark-grey: #333333;
+    --primary-color: #004e92;
+    --secondary-color: #333333;
+    --accent-color: #fcfcfc;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
+    line-height: 1.6;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    border-bottom: 2px solid var(--primary-blue);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 header img { height: 60px; }
@@ -21,11 +24,11 @@ header img { height: 60px; }
 nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
-/* Home & Trips Grid */
+/* Layout Profesional para Home y Trips */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -35,7 +38,7 @@ nav a {
     margin: 0 auto;
 }
 
-.card-box {
+.card {
     background: white;
     padding: 20px;
     border-radius: 12px;
@@ -43,45 +46,54 @@ nav a {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.card-box img {
+.card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-/* Fix for About Us Image */
-.about-img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-    margin: 20px 0;
+/* About Section Fix */
+.history-section {
+    padding: 40px 10%;
+    text-align: center;
 }
 
-/* Fix for Contact Map */
-.map-container img {
+.history-section img {
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     height: auto;
     border-radius: 8px;
 }
 
-/* Footer & Social Icons - FIXED */
+/* Contact Map Fix */
+.map-box img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* FOOTER - SOLUCIÓN DEFINITIVA PARA ICONOS GIGANTES */
 footer {
-    background: var(--dark-grey);
+    background: var(--secondary-color);
     color: white;
     text-align: center;
     padding: 40px 0;
+    margin-top: 50px;
 }
 
-.social-links {
+footer nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
+    gap: 25px;
+    margin-top: 20px;
 }
 
-.social-links img {
-    width: 32px !important;  /* Tamaño pequeño profesional */
+/* Forzamos el tamaño para que el Audit no los rompa */
+footer nav img {
+    width: 32px !important;
     height: 32px !important;
 }
