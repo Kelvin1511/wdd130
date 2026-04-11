@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -19,12 +19,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    padding: 1rem 5%;
     border-bottom: 2px solid var(--primary-color);
 }
 
 header img {
     height: 60px;
+    width: auto;
 }
 
 nav a {
@@ -40,22 +41,18 @@ main {
     padding: 20px;
 }
 
-.contact-info {
-    margin-bottom: 30px;
-}
-
-.map-container {
+.map-box {
     text-align: center;
-    width: 100%;
+    margin-top: 30px;
 }
 
-.map-container img {
+.map-box img {
     width: 100%;
     max-width: 600px;
     height: auto;
+    border-radius: 10px;
     display: block;
     margin: 0 auto;
-    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -67,14 +64,14 @@ footer {
     margin-top: 40px;
 }
 
-footer nav {
+.social-links {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 15px;
 }
 
-footer nav img {
-    width: 32px;
-    height: 32px;
+.social-links img {
+    width: 32px !important;
+    height: 32px !important;
 }
